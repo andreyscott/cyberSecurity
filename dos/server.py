@@ -17,7 +17,7 @@ class VulnerableHTTPRequestHandler(BaseHTTPRequestHandler):
         a=a+1
 
 
-def run(server_class=HTTPServer, handler_class=VulnerableHTTPRequestHandler, port=8080):
+def run(server_class=HTTPServer, handler_class=VulnerableHTTPRequestHandler, port=8000):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print(f'Starting vulnerable server on port {port}...')
